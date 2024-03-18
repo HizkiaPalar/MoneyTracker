@@ -1,14 +1,16 @@
-import {StyleSheet, View, ScrollView} from 'react-native';
+import {ScrollView, StyleSheet, View} from 'react-native';
 import React from 'react';
 import {Button, Gap, PageHeader, TextInput} from '../../components';
 
-const SignIn = ({navigation}) => {
+const SignUp = () => {
   return (
     <ScrollView style={styles.container}>
-      <PageHeader label="Sign In" backButton={false} />
+      <PageHeader label="Sign Up" backButton={true} />
       <Gap height={24} />
       <View style={styles.contentWrapper}>
-        <Gap height={26} />
+        <Gap height={152} />
+        <TextInput label="Full Name" placeholder="Type your full name" />
+        <Gap height={16} />
         <TextInput
           label="Email Address"
           placeholder="Type your email address"
@@ -16,20 +18,13 @@ const SignIn = ({navigation}) => {
         <Gap height={16} />
         <TextInput label="Password" placeholder="Type your password" />
         <Gap height={24} />
-        <Button label="Sign In" />
-        <Gap height={12} />
-        <Button
-          label="Add New Account"
-          backgroundColor="#8D92A3"
-          textColor="#FFFFFF"
-          onPress={() => navigation.navigate('SignUp')}
-        />
+        <Button label="Continue" />
       </View>
     </ScrollView>
   );
 };
 
-export default SignIn;
+export default SignUp;
 
 const styles = StyleSheet.create({
   container: {
