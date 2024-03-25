@@ -1,6 +1,6 @@
-import {ScrollView, StyleSheet, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {Button, Gap, PageHeader, TextInput} from '../../components';
+import {Button, Circle, Gap, PageHeader, TextInput} from '../../components';
 
 const SignUp = () => {
   return (
@@ -8,7 +8,9 @@ const SignUp = () => {
       <PageHeader label="Sign Up" backButton={true} />
       <Gap height={24} />
       <View style={styles.contentWrapper}>
-        <Gap height={152} />
+        <Gap height={24} />
+        <Circle />
+        <Gap height={16} />
         <TextInput label="Full Name" placeholder="Type your full name" />
         <Gap height={16} />
         <TextInput
